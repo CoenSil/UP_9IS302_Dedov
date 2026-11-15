@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Фокус — фотоуслуги и печать</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="#top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>Фокус</a>
+            <nav aria-label="Разделы"><a href="#works">Работы</a><a href="#prep">Подготовка к съёмке</a><a
+                    href="#reviews">Отзывы</a><a href="#order">Заказ</a></nav>
+            <a class="btn" href="#order">Заказать</a>
+        </div>
+    </header>
+
+    <main id="top">
+        <div class="hero">
+            <div class="wrap">
+                <div>
+                    <h1>Снимем, напечатаем, оформим</h1>
+                    <p>Фотостудия и копировальный центр: портреты, документы на фото, печать фотографий, фотокниги,
+                        ксерокопии и переплёт. Большинство заказов готово за день.</p>
+                    <a class="btn" href="#order">Оформить заказ</a>
+                </div>
+                <div class="strip" id="strip" aria-hidden="true"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        </div>
+
+        <section id="works">
+            <div class="wrap">
+                <h2>Примеры работ</h2>
+                <p class="lead">Выберите категорию, чтобы увидеть, как мы работаем со светом, цветом и печатью.</p>
+                <div class="filters" role="group" aria-label="Категории работ" id="filters"></div>
+                <div class="grid" id="gallery"></div>
+            </div>
+        </section>
+
+        <section id="prep">
+            <div class="wrap">
+                <h2>Как подготовиться к съёмке</h2>
+                <p class="lead">Несколько простых шагов заранее — и результат будет лучше, а съёмка пройдёт спокойнее.
+                </p>
+                <div class="tabs" role="tablist" id="tabs"></div>
+                <div id="tipbox"></div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="wrap">
+                <h2>Отзывы клиентов</h2>
+                <p class="lead">Что говорят те, кто уже снимался и печатался у нас.</p>
+                <div class="reviews" id="revs"></div>
+            </div>
+        </section>
+
+        <section id="order">
+            <div class="wrap">
+                <h2>Заказать услугу</h2>
+                <p class="lead">Заполните форму — мы перезвоним в течение часа в рабочее время и подтвердим время и
+                    стоимость.</p>
+                <form id="orderForm" novalidate>
+                    <label>Ваше имя<input id="name" autocomplete="name" required><span class="err"
+                            data-for="name"></span></label>
+                    <label>Телефон<input id="phone" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00"
+                            required><span class="err" data-for="phone"></span></label>
+                    <label>Услуга<select id="service"></select></label>
+                    <label>Количество<input id="qty" type="number" min="1" max="500" value="1"><span class="err"
+                            data-for="qty"></span></label>
+                    <label>Способ получения<select id="deliv">
+                            <option value="0">Заберу в студии</option>
+                            <option value="300">Курьером (+300 ₽)</option>
+                        </select></label>
+                    <label>Желаемая дата<input id="date" type="date"></label>
+                    <label class="full">Комментарий<textarea id="note" rows="3"
+                            placeholder="Формат, бумага, пожелания к съёмке"></textarea></label>
+                    <div class="full sum">
+                        <div>Предварительная стоимость<div class="price" id="total">0 ₽</div>
+                        </div><button class="btn" type="submit">Отправить заказ</button>
+                    </div>
+                    <div class="ok" id="ok" role="status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap"><span>© 2026 Фотостудия «Фокус»</span><span>Ежедневно 9:00–20:00 · ул. Примерная,
+                12</span><span>+7 900 000-00-00</span></div>
+        <div class="wrap">
+            <p class="credit">Портреты на сайте сгенерированы нейросетью, на них нет реальных людей (набор
+                faker-js/assets-person-portrait, лицензия CC0).</p>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
